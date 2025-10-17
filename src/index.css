@@ -3,3 +3,20 @@ body{
     overflow-x: hidden;
     background: #0f173b;
 }
+.active-link {
+    color:#2563eb;
+    background:#02153b;
+    padding: 8px 28px;
+    transition: padding 0.5s ;
+    border-radius: 5px;
+}
+.active-mobile{
+    color:#2563eb;
+    background:#02153b;
+    padding: 8px 285px;
+    width: 100vw;
+    text-align: left;
+    transition: padding 0.5s;
+    border-radius: 5px;
+
+}

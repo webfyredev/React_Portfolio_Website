@@ -4,20 +4,20 @@ import borders from '../images/batthern.png'
 import logoBg from '../images/fyre.png'
 import { ReactTyped } from "react-typed";
 import { Link } from "react-router-dom";
-import {buttonHover, scrollLeft} from '../animations/motion.js'
+import {buttonHover, scrollLeft, scrollRight} from '../animations/motion.js'
 import { motion } from "framer-motion";
 export default function Hero(){
     return(
         <>
 
-            <div className="w-full h-130 relative top-0 bg-[#0f173b] flex items-center justify-between px-5 py-10">
-                <div className="flex flex-col items-left w-[45%] h-full px-3 py-10">
-                    <button className="w-35 h-9  bg-[#0f172a] rounded-xl text-xs font-semibold text-slate-300 cursor-pointer drop-shadow-[0_0_5px_#2563eb]">
+            <div className="w-full md:h-130 h-auto relative top-0 bg-[#0f173b] flex flex-col md:flex md:flex-row items-center justify-between px-5 py-10 absolute top-16" id="home">
+                <div className="flex flex-col items-left md:w-[45%] w-full h-auto md:h-full px-3 py-10">
+                    <motion.button {...scrollLeft} className="w-35 h-9  bg-[#0f172a] rounded-xl text-xs font-semibold text-slate-300 cursor-pointer drop-shadow-[0_0_5px_#2563eb]">
                     Ready to Build
-                    </button>
-                    <h1 className="mt-5 text-4xl font-bold text-slate-300">
+                    </motion.button>
+                    <motion.h1 {...scrollRight} className="mt-5 text-4xl font-bold text-slate-300">
                         Hi, I'm <span className=" text-slate-100 drop-shadow-[0_0_20px_#38bdf8]">Full-stack Developer</span>
-                    </h1>
+                    </motion.h1>
                     <h2 className=" mt-5 text-lg md:text-xl font-semibold text-[#38bdf8] drop-shadow-[0_0_20px_#2563eb]">
                         <ReactTyped 
                         strings={[
@@ -49,7 +49,7 @@ export default function Hero(){
                         </motion.button>
                     </motion.div> 
                 </div>
-                <div className="w-[45%] h-full">
+                <div className="md:w-[45%] md:h-full w-full h-auto">
                     <motion.img {...scrollLeft} src={logoBg} className="w-full h-[100%] object-cover relative"/>
                 </div>
             </div>

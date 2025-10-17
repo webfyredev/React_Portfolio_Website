@@ -1,4 +1,4 @@
-import {motion, scale} from 'framer-motion'
+import {delay, motion, scale} from 'framer-motion'
 
 
 export const buttonHover = {
@@ -15,6 +15,11 @@ export const scrollUp = {
     whileInView : {opacity:1, y:0},
     transition : {duration : 1},
 }
+export const scrollUpNext = {
+    initial : {opacity : 0, y:20},
+    whileInView : {opacity:1, y:0},
+    transition : {duration : 1, delay : 0.4},
+}
 export const scrollRight = {
     initial : {opacity : 0, x : -30},
     whileInView : {opacity:1, x : 0},
@@ -25,6 +30,12 @@ export const scrollRight = {
 export const skillEffectsbtn = {
     initial : { opacity : 0, y : 20},
     whileInView : {opacity : 1, y:0},
+    whileHover : {scale : 1.05},
+    transition : {duration : 0.5}
+}
+export const projectEffectsbtn = {
+    initial : { opacity : 0, x : 30},
+    whileInView : {opacity : 1, x : 0},
     whileHover : {scale : 1.05},
     transition : {duration : 0.5}
 }
