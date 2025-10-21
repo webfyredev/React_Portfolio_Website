@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
-import { scrollUp } from "../animations/motion";
+import { scrollUp, scrollUpNext } from "../animations/motion";
 import { motion } from "framer-motion";
 
 const faqs = [
@@ -33,26 +33,26 @@ export default function Faqs (){
     }
     return(
         <>
-            <motion.section {...scrollUp} className="w-full bg-[#0f172a] text-white px-8 py-5 overflow-hidden">
-                <h2 className="text-3xl font-bold text-center mb-10 mt-3 text-[#38bdf8]">
+            <section className="w-full bg-[#0f172a] text-white px-8 py-5 overflow-hidden">
+                <motion.h2 {...scrollUp} className="text-3xl font-bold text-center mb-10 mt-3 text-[#38bdf8]">
                     Frequently Asked Questions
-                </h2>
+                </motion.h2>
                 <div className="space-y-4 mb-10">
                     {faqs.map((faq, index) =>(
-                        <div key={index} className="border-0.8 border-[#38bdf8] rounded-lg overflow-hidden">
-                            <button onClick={() => toggleFaqs(index)} className="w-full flex justify-between items-center p-4 text-left bg-[#0f173b] hover:bg-[#02153b] group transition-all">
+                        <motion.div {...scrollUpNext} key={index} className="border-0.8 border-[#38bdf8] rounded-lg overflow-hidden">
+                            <button onClick={() => toggleFaqs(index)} className="w-full flex justify-between items-center p-4 text-left bg-[#0f173b] hover:bg-[#02153b] group transition-all duration-300">
                                 <span className="font-semibold text-xs md:text-sm">{faq.question}</span>
                                 <FaChevronDown  className={`transform transition-transform group-hover:text-[#38bdf8] duration-300 ${activeIndex === index ? "rotate-180" : ""}`}/>
                             </button>
                             {activeIndex === index && (
-                                <div className="p-4 bg-[#02153b] text-gray-300 text-sm transition-all duration-600">
+                                <div className="p-4 bg-[#02153b] text-gray-300 text-xs md:text-sm transition-all duration-300">
                                     {faq.answer}
                                 </div>
                             )}
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
-            </motion.section>
+            </section>
         </>
     )
 }

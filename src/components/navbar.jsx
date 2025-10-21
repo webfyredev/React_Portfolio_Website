@@ -85,60 +85,60 @@ export default function NavBar(){
                         <motion.div {...scrollUp} className="absolute top-16 left-0 w-full h-auto px-2 py-5 bg-[#0f172a]">
                             <ul className="flex flex-col space-y-2">
                                 <li className="px-7 py-3 rounded-md font-semibold text-[#64748b] text-sm hover:cursor-pointer hover:text-[#2563eb] hover:bg-[#02153b] transition-all duration-300 mr-1">
-                            <ScrollLink to="home"
-                            smooth={true}
-                            duration={600}
-                            offset={-50}
-                            spy={true}
-                            activeClass = 'active-mobile'
-                            >
-                                Home
-                            </ScrollLink>
-                        </li>
-                        <li className="px-7 py-3 rounded-md font-semibold text-[#64748b] text-sm hover:cursor-pointer hover:text-[#2563eb] hover:bg-[#02153b] transition-all duration-300 mr-1">
-                            <ScrollLink to="about"
-                            smooth={true}
-                            duration={600}
-                            offset={-50}
-                            spy={true}
-                            activeClass="active-mobile"
-                            >
-                                About
-                            </ScrollLink>
-                        </li>
-                        <li className="px-7 py-3 rounded-md font-semibold text-[#64748b] text-sm hover:cursor-pointer hover:text-[#2563eb] hover:bg-[#02153b] transition-all duration-300 mr-1">
-                            <ScrollLink to="skill"
-                            smooth={true}
-                            duration={600}
-                            offset = {-50}
-                            spy={true}
-                            activeClass="active-mobile"
-                            >
-                                Skills
-                            </ScrollLink>
-                        </li>
-                        <li className="px-7 py-3 rounded-md font-semibold text-[#64748b] text-sm hover:cursor-pointer hover:text-[#2563eb] hover:bg-[#02153b] transition-all duration-300 mr-1">
-                            <ScrollLink to="project"
-                            smooth={true}
-                            duration={600}
-                            offset={-50}
-                            spy={true}
-                            activeClass = "active-mobile"
-                            >
-                                Projects
-                            </ScrollLink>
-                        </li>
-                        <li className="px-7 py-3 rounded-md font-semibold text-[#64748b] text-sm hover:cursor-pointer hover:text-[#2563eb] hover:bg-[#02153b] transition-all duration-300 mr-1">
-                            <ScrollLink to="contact"
-                            smooth={true}
-                            duration={600}
-                            offset={-50}
-                            spy={true}
-                            activeClass="active-mobile"
-                            >
-                                Contacts
-                            </ScrollLink>
-                        </li>
+                                    <ScrollLink to="home"
+                                        smooth={true}
+                                        duration={600}
+                                        offset={-50}
+                                        spy={true}
+                                        activeClass = 'active-mobile'
+                                        >
+                                        Home
+                                    </ScrollLink>
+                                </li>
+                                <li className="px-7 py-3 rounded-md font-semibold text-[#64748b] text-sm hover:cursor-pointer hover:text-[#2563eb] hover:bg-[#02153b] transition-all duration-300 mr-1">
+                                    <ScrollLink to="about"
+                                        smooth={true}
+                                        duration={600}
+                                        offset={-50}
+                                        spy={true}
+                                        activeClass="active-mobile"
+                                        >
+                                            About
+                                    </ScrollLink>
+                                </li>
+                                <li className="px-7 py-3 rounded-md font-semibold text-[#64748b] text-sm hover:cursor-pointer hover:text-[#2563eb] hover:bg-[#02153b] transition-all duration-300 mr-1">
+                                    <ScrollLink to="skill"
+                                        smooth={true}
+                                        duration={600}
+                                        offset = {-50}
+                                        spy={true}
+                                        activeClass="active-mobile"
+                                        >
+                                        Skills
+                                    </ScrollLink>
+                                </li>
+                                <li className="px-7 py-3 rounded-md font-semibold text-[#64748b] text-sm hover:cursor-pointer hover:text-[#2563eb] hover:bg-[#02153b] transition-all duration-300 mr-1">
+                                    <ScrollLink to="project"
+                                        smooth={true}
+                                        duration={600}
+                                        offset={-50}
+                                        spy={true}
+                                        activeClass = "active-mobile"
+                                        >
+                                            Projects
+                                    </ScrollLink>
+                                </li>
+                                <li className="px-7 py-3 rounded-md font-semibold text-[#64748b] text-sm hover:cursor-pointer hover:text-[#2563eb] hover:bg-[#02153b] transition-all duration-300 mr-1">
+                                    <ScrollLink to="contact"
+                                        smooth={true}
+                                        duration={600}
+                                        offset={-50}
+                                        spy={true}
+                                        activeClass="active-mobile"
+                                        >
+                                        Contacts
+                                    </ScrollLink>
+                                </li>
                             </ul>
                         </motion.div>
                     )}

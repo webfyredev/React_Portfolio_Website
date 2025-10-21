@@ -37,11 +37,11 @@ export default function Contacts(){
                     {status}
                 </motion.div>
             )}
-            <div className="w-full h-auto px-3 md:px-5 py-10 items-center flex flex-col mt-10 overflow-hidden border-2 border-red-500" id="contact">
+            <div className="w-full h-auto px-3 md:px-5 py-10 items-center flex flex-col mt-10 overflow-hidden" id="contact">
                 <motion.h2 {...scrollUp} className="text-3xl font-bold text-center mb-3 mt-3 text-[#38bdf8]">
                     Get In Touch
                 </motion.h2>
-                <motion.p {...scrollUpNext} className="text-center md:w-[40%] text-slate-300 text-sm">
+                <motion.p {...scrollUpNext} className="text-center md:w-[40%] w-[80%] text-slate-300 text-xs  md:text-sm">
                     I'm always open to discussing new opportunities, interesting projects, or just haiving a chat about technology. Feel free to reach out.
                 </motion.p>
                 <form onSubmit={handleSubmit} className="md:w-[90%] w-full h-auto mt-5 flex flex-col p-5">
@@ -63,7 +63,7 @@ export default function Contacts(){
                             <h3 className="font-semibold text-slate-200">
                                 Location
                             </h3>
-                            <p className="text-sm text-white">
+                            <p className="text-xs md:text-sm text-white">
                                 Ilorin, Nigeria
                             </p>
                         </div>
@@ -94,11 +94,18 @@ export default function Contacts(){
                         Follow Me
                     </h3>
                     <div className="flex Items-center justify-between w-50 h-auto px-4 py-2 mt-3">
-                        <FaGithub  className="w-9 h-9 cursor-pointer bg-[#0f173b] text-[#38bdf8] p-2 rounded-full"/>
-                        <FaLinkedin  className="w-9 h-9 cursor-pointer bg-[#0f173b] text-[#38bdf8] p-2 rounded-full"/>
-                        <FaTwitter  className="w-9 h-9 cursor-pointer bg-[#0f173b] text-[#38bdf8] p-2 rounded-full"/>
-                        <MdEmail  className="w-9 h-9 cursor-pointer bg-[#0f173b] text-[#38bdf8] p-2 rounded-full"/>
-
+                        <Link to="#">
+                            <FaGithub  className="w-9 h-9 cursor-pointer bg-[#0f173b] text-[#38bdf8] p-2 rounded-full hover:bg-gradient-to-r from-[#38bdf8] to-[#2563eb] hover:text-[#0f172a] transtion-all duration-500"/>
+                        </Link>
+                        <Link to="#">
+                            <FaLinkedin  className="w-9 h-9 cursor-pointer bg-[#0f173b] text-[#38bdf8] p-2 rounded-full hover:bg-gradient-to-r from-[#38bdf8] to-[#2563eb] hover:text-[#0f172a] transtion-all duration-500"/>
+                        </Link>
+                        <Link to="#">
+                            <FaTwitter  className="w-9 h-9 cursor-pointer bg-[#0f173b] text-[#38bdf8] p-2 rounded-full hover:bg-gradient-to-r from-[#38bdf8] to-[#2563eb] hover:text-[#0f172a] transtion-all duration-500"/>
+                        </Link>
+                        <Link to="#">
+                            <MdEmail  className="w-9 h-9 cursor-pointer bg-[#0f173b] text-[#38bdf8] p-2 rounded-full hover:bg-gradient-to-r from-[#38bdf8] to-[#2563eb] hover:text-[#0f172a] transtion-all duration-500"/>
+                        </Link>
                     </div>
                 </motion.div>
             </div>
