@@ -37,7 +37,7 @@ export default function Contacts(){
                     {status}
                 </motion.div>
             )}
-            <div className="w-full h-auto px-5 py-10 items-center flex flex-col mt-10" id="contact">
+            <div className="w-full h-auto px-3 md:px-5 py-10 items-center flex flex-col mt-10 overflow-hidden border-2 border-red-500" id="contact">
                 <motion.h2 {...scrollUp} className="text-3xl font-bold text-center mb-3 mt-3 text-[#38bdf8]">
                     Get In Touch
                 </motion.h2>

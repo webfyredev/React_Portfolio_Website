@@ -3,14 +3,14 @@ import { FaArrowDown, FaGithub, FaLinkedin, FaEnvelope, FaChevronRight,} from "r
 import borders from '../images/batthern.png'
 import logoBg from '../images/fyre.png'
 import { ReactTyped } from "react-typed";
-import { Link } from "react-router-dom";
+import {Link} from 'react-scroll'
 import {buttonHover, scrollLeft, scrollRight} from '../animations/motion.js'
 import { motion } from "framer-motion";
 export default function Hero(){
     return(
         <>
 
-            <div className="w-full md:h-130 h-auto relative top-0 bg-[#0f173b] flex flex-col md:flex md:flex-row items-center justify-between px-5 py-10 absolute top-16" id="home">
+            <div className="w-full md:h-130 h-auto relative top-0 bg-[#0f173b] flex flex-col md:flex md:flex-row items-center justify-between px-5 py-10 absolute top-16 overflow-hidden" id="home">
                 <div className="flex flex-col items-left md:w-[45%] w-full h-auto md:h-full px-3 py-10">
                     <motion.button {...scrollLeft} className="w-35 h-9  bg-[#0f172a] rounded-xl text-xs font-semibold text-slate-300 cursor-pointer drop-shadow-[0_0_5px_#2563eb]">
                     Ready to Build
@@ -38,12 +38,20 @@ export default function Hero(){
                     </p>
                     <motion.div {...scrollLeft} className="flex flex-row mt-10">
                         <motion.button {...buttonHover} className="px-8 py-3 rounded-lg bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-[#0f172a] font-semibold text-sm cursor-pointer hover:drop-shadow-[0_0_3px_#2563eb] transition-all duration-200">
-                            <Link to='#' className="flex">
+                            <Link to='project' 
+                                smooth = {true}
+                                duration = {600}
+                                offset={-50}
+                            className="flex">
                             View Projects <FaChevronRight  className="w-3 h-3 mt-1.5 ml-0.5"/>
                             </Link>
                         </motion.button>
                         <motion.button {...buttonHover} className="px-8 py-3 ml-2 rounded-lg bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-[#0f172a] font-semibold text-sm cursor-pointer hover:drop-shadow-[0_0_3px_#2563eb] transition-all duration-200">
-                            <Link to='mailto:oyinbook@gmail.com' className="flex">
+                            <Link to="contact"
+                            smooth = {true}
+                            duration = {600}
+                            offset = {-50}
+                            className="flex">
                             Contact Me<FaEnvelope  className="w-4 h-4 mt-1 ml-0.5"/>
                             </Link>
                         </motion.button>

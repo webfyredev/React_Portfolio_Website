@@ -12,11 +12,9 @@ body{
 }
 .active-mobile{
     color:#2563eb;
-    background:#02153b;
-    padding: 8px 285px;
-    width: 100vw;
-    text-align: left;
-    transition: padding 0.5s;
     border-radius: 5px;
 
+}
+html{
+    transition: background-color 0.4s ease, color 0.4s ease;
 }

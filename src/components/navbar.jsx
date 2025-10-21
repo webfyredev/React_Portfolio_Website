@@ -1,19 +1,21 @@
 import { useState, useEffect } from "react";
 import { Route, Link as RouteLink } from "react-router-dom";
 import logo from '../images/log.png'
-import { BsSun, BsMoon } from "react-icons/bs";
+// import { BsSun, BsMoon } from "react-icons/bs";
 import { FaMoon, FaSun, FaTimes, FaBars} from "react-icons/fa"
 import { Link as ScrollLink } from "react-scroll"
+import { scrollUp } from "../animations/motion";
+import { motion } from "framer-motion";
+import ThemeToggle from "../components/themeToggle";
 
 
 
 
 export default function NavBar(){
-    const [isOpen, setIsOpen] = useState(false);
     const [openIcon, setOpenIcon] = useState(false)
     return(
         <>
-            <nav className="w-full h-15 z-50 top-0 bg-[#0f172a]/80 backdrop-blur-md z-50 flex flex-row items-center justify-between px-8 fixed">
+            <nav className="w-full h-15 z-50 top-0 bg-red-500  dark:bg-[#0f172a]/80 backdrop-blur-md z-50 flex flex-row items-center justify-between px-8 fixed overflow-hidden">
                 <RouteLink to ="/" className="font-bold text-[#38bdf8] text-2xl flex">
                     <img src={logo} className="w-9 h-8.5" />WebFyre
                 </RouteLink>
@@ -75,14 +77,12 @@ export default function NavBar(){
                     </ul>
                 </div>
                 <div>
-                    <button onClick={() => setIsOpen(!isOpen)} className="p-3 hover:bg-[#02153b] transition-all duration-300 cursor-pointer rounded-md text-[#64748b] hover:text-[#2563eb] outline-none mr-5 md:mr-0">
-                        {isOpen ? <BsSun  className="w-6 h-5 drop-shadow-md "/> : <FaMoon  className="w-6 h-5 drop-shadow-md"/>  }
-                    </button>
+                    <ThemeToggle />
                     <button onClick={() => setOpenIcon(!openIcon)} className="md:hidden p-3 hover:bg-[#02153b] transition-all duration-300 cursor-pointer rounded-md text-[#64748b] hover:text-[#2563eb] outline-none">
                         {openIcon ? <FaTimes  size={20}/> : <FaBars  size={20}/>}
                     </button>
                     {openIcon && (
-                        <div className="absolute top-16 left-0 w-full h-auto px-2 py-5 bg-[#0f172a]">
+                        <motion.div {...scrollUp} className="absolute top-16 left-0 w-full h-auto px-2 py-5 bg-[#0f172a]">
                             <ul className="flex flex-col space-y-2">
                                 <li className="px-7 py-3 rounded-md font-semibold text-[#64748b] text-sm hover:cursor-pointer hover:text-[#2563eb] hover:bg-[#02153b] transition-all duration-300 mr-1">
                             <ScrollLink to="home"
@@ -140,7 +140,7 @@ export default function NavBar(){
                             </ScrollLink>
                         </li>
                             </ul>
-                        </div>
+                        </motion.div>
                     )}
                 </div>
             </nav>

@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { scrollLeft, buttonHover, scrollUp, scrollRight, projectEffectsbtn, scrollUpNext } from "../animations/motion";
-import { FaDownload, FaCode } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { FaDownload, FaCode, FaChevronRight } from "react-icons/fa";
+// import { Link } from "react-router-dom";
+import { Link } from "react-scroll"
 import { FaGithub, FaLinkedin, FaTwitter, FaLaptopCode, FaServer, FaPlug, FaDatabase, FaCodeBranch } from "react-icons/fa";
 import aboutImg from '../images/fyre.png'
 export default function About(){
@@ -39,11 +40,11 @@ export default function About(){
     ];
     return(
         <>
-        <motion.div {...scrollUp} className="w-full md:h-120 h-auto mt-20 bg-[#0f172a]" id="about">
+        <motion.div {...scrollUp} className="w-full md:h-120 h-auto mt-20 bg-[#0f172a] overflow-hidden" id="about">
             <motion.h2 {...scrollUp} className="font-bold text-[#38bdf8] text-3xl flex w-[100%] md:h-[12%] h-auto flex items-center justify-center pt-5">
             About Me
             </motion.h2>
-            <div className="md:flex md:flex-row flex flex-col w-[100%] md:h-[85%] h-auto px-5 py-3 justify-between mt-5">
+            <div className="md:flex md:flex-row flex flex-col sm:flex-col w-[100%] md:h-[85%] h-auto px-5 py-3 justify-between mt-5">
                 <div className="md:w-[45%] w-full h-auto md:h-full">
                 <motion.img {...scrollRight} src={aboutImg} className="w-full h-full object-cover" />
                 </div>
@@ -61,20 +62,24 @@ export default function About(){
                     </p>
                     <motion.div {...scrollLeft} className="flex flex-row mt-10">
                             <motion.button {...buttonHover} className="px-8 py-3 rounded-lg bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-[#0f172a] font-semibold text-sm cursor-pointer mr-3 hover:drop-shadow-[0_0_3px_#2563eb] transition-all duration-200 hover:text-white">
-                                <Link to='#' className="flex">
+                                <a href='#' className="flex">
                                 Download CV <FaDownload  className="w-3 h-3 mt-1.5 ml-1"/>
-                                </Link>
+                                </a>
                             </motion.button>
                             <motion.button {...buttonHover} className="px-8 py-3 ml-2 rounded-lg bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-[#0f172a] font-semibold text-sm cursor-pointer hover:drop-shadow-[0_0_3px_#2563eb] transition-all duration-200 hover:text-white">
-                                <Link to='mailto:oyinbook@gmail.com' className="flex">
-                                View Projects<FaCode  className="w-4 h-4 mt-1 ml-1"/>
+                                <Link to="project"
+                                smooth={true}
+                                duration={600}
+                                offset={-50}
+                                className="flex">
+                                View Projects<FaChevronRight  className="w-3 h-3 mt-1.5 ml-1"/>
                                 </Link>
                             </motion.button>
                     </motion.div>
                 </motion.div>
             </div>
         </motion.div>
-        <div className="w-full h-auto bg-[#0f172a] flex flex-col px-5 py-10 items-center">
+        <div className="w-full h-auto bg-[#0f172a] flex flex-col px-5 py-10 items-center overflow-hidden">
             <motion.h1 {...scrollUp} className="font-bold text-[#38bdf8] md:text-3xl text-2xl mt-10">
                 End-to-End Development Services
             </motion.h1>
@@ -83,14 +88,14 @@ export default function About(){
                 seamless AI integration to building reliable backends and engaging frontends 
                 ensuring your ideas come to life with precision and creativity.
             </motion.p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mt-5 gap-5 py-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-5 py-5">
                 {services.map((data, index) =>(
                     <motion.div {...buttonHover} {...projectEffectsbtn} key={index} className="flex flex-col p-4 bg-[#0f173b] rounded-md">
                         {data.icon}
                         <h3 className="mt-2 font-semibold text-[#38bdf8]">
                             {data.title}
                         </h3>
-                        <p className="text-slate-200 text-sm mt-2">
+                        <p className="text-slate-200 text-sm my-2">
                             {data.sb_title}  
                         </p>
                     </motion.div>  

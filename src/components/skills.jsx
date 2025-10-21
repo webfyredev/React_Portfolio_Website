@@ -75,10 +75,10 @@ export default function Skills(){
     ]
     return(
         <>
-            <div className="w-full h-auto bg-gradient-to-b from-[#0f173b] to-[#1e293b] flex flex-col items-center py-5 md:py-10" id="skill">
+            <div className="w-full h-auto bg-gradient-to-b from-[#0f173b] to-[#1e293b] flex flex-col items-center py-5 md:py-10 overflow-hidden" id="skill">
                 <motion.h2 {...scrollUp} className="mt-10 font-bold text-[#38bdf8] text-3xl">Technical Skills</motion.h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 md:gap-5 gap-3 mt-10">
-                    <motion.div {...buttonHover} className="md:w-85 w-100 mb-5 md:mb-0 h-85 p-5 rounded-md bg-[#0f172a] shadow-md cursor-pointer">
+                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5 gap-3 mt-10">
+                    <motion.div {...buttonHover} className="md:w-85 w-100 sm:w-150 mb-5 md:mb-0 h-85 p-5 rounded-md bg-[#0f172a] shadow-md cursor-pointer">
                         <FaLaptopCode className="w-10 h-8 mb-3 text-[#38bdf8] mt-2"/>
                         <h3 className="font-semibold mb-3 text-xl bg-gradient-to-r from-[#38bdf8] to-[#2563eb] bg-clip-text text-transparent">
                         Frontend
@@ -102,7 +102,7 @@ export default function Skills(){
                             </div>
                         ))}
                     </motion.div>
-                    <motion.div {...buttonHover} className="md:w-85 w-100 mb-5 md:mb-0 h-85 p-5 rounded-md bg-[#0f172a] shadow-md cursor-pointer">
+                    <motion.div {...buttonHover} className="md:w-85 sm:w-150 w-100 mb-5 md:mb-0 h-85 p-5 rounded-md bg-[#0f172a] shadow-md cursor-pointer">
                         <FaServer className="w-10 h-8 mb-3 text-[#38bdf8] mt-2"/>
                         <h3 className="font-semibold mb-3 text-xl bg-gradient-to-r from-[#38bdf8] to-[#2563eb] bg-clip-text text-transparent">
                         Backend
@@ -126,7 +126,7 @@ export default function Skills(){
                             </div>
                         ))}
                     </motion.div>
-                    <motion.div {...buttonHover} className="md:w-85 w-100 mb-5 md:mb-0 h-85 p-5 rounded-md bg-[#0f172a] shadow-md cursor-pointer">
+                    <motion.div {...buttonHover} className="md:w-85 sm:w-150 w-100 mb-5 md:mb-0 h-85 p-5 rounded-md bg-[#0f172a] shadow-md cursor-pointer">
                         <FaDatabase className="w-10 h-8 mb-3 text-[#38bdf8] mt-2"/>
                         <h3 className="font-semibold mb-3 text-xl bg-gradient-to-r from-[#38bdf8] to-[#2563eb] bg-clip-text text-transparent">
                         Database
@@ -150,7 +150,7 @@ export default function Skills(){
                             </div>
                         ))}
                     </motion.div>
-                    <motion.div {...buttonHover} className="md:w-85 w-100 mb-5 md:mb-0 h-85 p-5 rounded-md bg-[#0f172a] shadow-md cursor-pointer">
+                    <motion.div {...buttonHover} className="md:w-85 sm:w-150 w-100 mb-5 md:mb-0 h-85 p-5 rounded-md bg-[#0f172a] shadow-md cursor-pointer">
                         <FaTools className="w-10 h-8 mb-3 text-[#38bdf8] mt-2"/>
                         <h3 className="font-semibold mb-3 text-xl bg-gradient-to-r from-[#38bdf8] to-[#2563eb] bg-clip-text text-transparent">
                         Other Tools
