@@ -15,7 +15,7 @@ export default function Contacts(){
     const handleSubmit = async (e) =>{
         e.preventDefault();
         try{
-            await axios.post("http://127.0.0.1:345/contact/", formData);
+            await axios.post("https://portfolio-backend-1-2dt3.onrender.com/contact/", formData);
             setStatus("Messages sent successfully");
             setFormData ({full_name:"", email:"", message:""})
             setTimeout(() => setStatus(""), 4000)

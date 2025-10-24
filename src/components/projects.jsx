@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function Project(){
     const [projects, setProjects] = useState([])
     useEffect(() =>{
-        axios.get("http://127.0.0.1:345/project-list/")
+        axios.get("https://portfolio-backend-1-2dt3.onrender.com/project-list/")
         .then((response) =>{
             setProjects(response.data)
         })
@@ -15,7 +15,7 @@ export default function Project(){
             console.error('Error fetching projects', error)
         });
     }, []);
-    const baseUrl = 'http://127.0.0.1:345';
+    const baseUrl = 'https://portfolio-backend-1-2dt3.onrender.com';
     return(
         <>
         <div className="w-full h-auto flex flex-col items-center overflow-hidden" id="project">
