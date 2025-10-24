@@ -43,7 +43,7 @@ export default function Hero(){
                                 duration = {600}
                                 offset={-50}
                             className="flex">
-                            View Projects <FaChevronRight  className="w-3 h-3 mt-1.5 ml-0.5"/>
+                            View Projects <FaChevronRight  className="w-3 h-3 md:mt-1 mt:0.5 ml-0.5"/>
                             </Link>
                         </motion.button>
                         <motion.button {...buttonHover} className="px-8 py-3 ml-2 rounded-lg bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-[#0f172a] font-semibold text-sm cursor-pointer hover:drop-shadow-[0_0_3px_#2563eb] transition-all duration-200">
@@ -52,7 +52,7 @@ export default function Hero(){
                             duration = {600}
                             offset = {-50}
                             className="flex">
-                            Contact Me<FaEnvelope  className="w-4 h-4 mt-1 ml-0.5"/>
+                            Contact Me<FaEnvelope  className="w-4 h-4 md:mt-1 mt-0.5 ml-0.5"/>
                             </Link>
                         </motion.button>
                     </motion.div> 
