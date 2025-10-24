@@ -6,7 +6,7 @@ import { FaMoon, FaSun, FaTimes, FaBars} from "react-icons/fa"
 import { Link as ScrollLink } from "react-scroll"
 import { scrollUp } from "../animations/motion";
 import { motion } from "framer-motion";
-import ThemeToggle from "../components/ThemeToggle";
+// import ThemeToggle from "../components/ThemeToggle";
 
 
 
