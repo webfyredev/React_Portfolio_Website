@@ -20,7 +20,7 @@ export default function Project(){
         <>
         <div className="w-full h-auto flex flex-col items-center overflow-hidden" id="project">
                 <motion.h2 {...scrollUp} className="mt-5 font-bold text-[#38bdf8] text-3xl">My Projects</motion.h2>
-                <motion.p {...scrollUpNext} className="md:w-[50%] text-center my-3 text-slate-200 text-sm">
+                <motion.p {...scrollUpNext} className="md:w-[50%] text-center my-3 text-slate-200 text-xs lg:text-sm">
                     Here are some of my recent prrojects that showcase my skills in web development and backend engineering. Each project represents a unique challenge and solution
                 </motion.p>
                 <motion.div {...scrollUp} className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full h-auto mt-3 p-5">
@@ -37,16 +37,16 @@ export default function Project(){
                             ))}
                         </ul>
                         <div className="w-full h-20 mt-4 flex items-center justify-between">
-                            <button className="w-35 h-[85%] bg-gradient-to-r from-[#38bdf8] to-[#2563eb] text-sm font-semibold rounded-md cursor-pointer text-white">
+                            <motion.button {...buttonHover} className="w-35 h-[85%] bg-gradient-to-r from-[#38bdf8] to-[#2563eb] text-sm font-semibold rounded-md cursor-pointer text-white">
                                 <Link to={project.live_demo}>
                                     Live Demo
                                 </Link>
-                            </button>
-                            <button className="w-35 h-[85%] border-1 border-[#38bdf8] text-sm font-semibold rounded-md cursor-pointer text-white hover:bg-gradient-to-r from-[#38bdf8] to-[#2563eb] transition-all duration-500">
+                            </motion.button>
+                            <motion.button {...buttonHover} className="w-35 h-[85%] border-1 border-[#38bdf8] text-sm font-semibold rounded-md cursor-pointer text-white hover:bg-gradient-to-r from-[#38bdf8] to-[#2563eb] transition-all duration-500">
                                 <Link to={project.code_link}>
                                     View Code
                                 </Link>
-                            </button>
+                            </motion.button>
                         </div>
                     </motion.div>
                 ))}

@@ -1,7 +1,7 @@
 import { SiDjango, SiNodedotjs, SiReact, SiTailwindcss, SiPython, SiJavascript,} from "react-icons/si";
 import { FaLaptopCode, FaServer, FaDatabase, FaTools } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { buttonHover, scrollUp, skillEffectsbtn } from "../animations/motion";
+import { buttonHover, scrollUp, skillEffectsbtn, scrollLeft, scrollRight } from "../animations/motion";
 export default function Skills(){
     const frontEnd_Skills = [
         {
@@ -77,8 +77,8 @@ export default function Skills(){
         <>
             <div className="w-full h-auto bg-gradient-to-b from-[#0f173b] to-[#1e293b] flex flex-col items-center py-5 md:py-10 overflow-hidden" id="skill">
                 <motion.h2 {...scrollUp} className="mt-10 font-bold text-[#38bdf8] text-3xl">Technical Skills</motion.h2>
-                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5 gap-3 mt-10">
-                    <motion.div {...buttonHover} className="md:w-85 w-100 sm:w-150 mb-5 md:mb-0 h-85 p-5 rounded-md bg-[#0f172a] shadow-md cursor-pointer">
+                <motion.div {...scrollLeft} className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5 gap-3 mt-10">
+                    <motion.div {...buttonHover}  className="md:w-85 w-100 sm:w-150 mb-5 md:mb-0 h-85 p-5 rounded-md bg-[#0f172a] shadow-md cursor-pointer">
                         <FaLaptopCode className="w-10 h-8 mb-3 text-[#38bdf8] mt-2"/>
                         <h3 className="font-semibold mb-3 text-xl bg-gradient-to-r from-[#38bdf8] to-[#2563eb] bg-clip-text text-transparent">
                         Frontend
@@ -174,7 +174,7 @@ export default function Skills(){
                             </div>
                         ))}
                     </motion.div>
-                </div>
+                </motion.div>
             </div>
         </>
     );
