@@ -18,8 +18,6 @@ export default function Home_Page(){
             <Faqs />
             <Contacts />
             <Footer />
-
-
         </>
     );
 }

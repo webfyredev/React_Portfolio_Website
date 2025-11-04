@@ -45,11 +45,11 @@ export default function Contacts(){
                     I'm always open to discussing new opportunities, interesting projects, or just haiving a chat about technology. Feel free to reach out.
                 </motion.p>
                 <form onSubmit={handleSubmit} className="md:w-[90%] w-full h-auto mt-5 flex flex-col p-5">
-                    <label htmlFor="" className="mb-2 font-semibold text-sm text-[#38bdf8]">Full Name</label>
+                    <label htmlFor="" className="mb-2 font-semibold text-sm text-[#38bdf8] ml-1">Full Name</label>
                     <input type="text" name="full_name" value={formData.full_name} onChange={handleChange} required placeholder="Enter your full name" className="w-full h-12 outline-none p-5 hover:drop-shadow-[0_0_1px_#2563eb] rounded-lg bg-[#0f172a] text-[#38bdf8] transition-all duration-200 mb-5 text-sm"/>
-                    <label htmlFor="" className="mb-2 font-semibold text-sm text-[#38bdf8]">Email Address</label>
+                    <label htmlFor="" className="mb-2 font-semibold text-sm text-[#38bdf8] ml-1">Email Address</label>
                     <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Enter your email address" className="w-full h-12 outline-none p-5 hover:drop-shadow-[0_0_1px_#2563eb] rounded-lg bg-[#0f172a] text-[#38bdf8] transition-all duration-200 mb-5 text-sm"/>
-                    <label htmlFor="" className="mb-2 font-semibold text-sm text-[#38bdf8]">Message</label>
+                    <label htmlFor="" className="mb-2 font-semibold text-sm text-[#38bdf8] ml-1">Message</label>
                     <textarea  name="message" value={formData.message} onChange={handleChange} required placeholder="Tell me about your project or just say hello!" className="w-full h-30 outline-none p-5 hover:drop-shadow-[0_0_1px_#2563eb] rounded-lg bg-[#0f172a] text-[#38bdf8] transition-all duration-200 text-sm"></textarea>
                     <motion.button type="submit" {...buttonHover} className="mt-5 w-full h-13 rounded-lg cursor-pointer font-bold bg-[#38bdf8]">Send Message</motion.button>
                 </form>

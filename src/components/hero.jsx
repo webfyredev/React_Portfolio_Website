@@ -34,7 +34,7 @@ export default function Hero(){
                     </h2>
                     <p className="text-slate-200 text-sm mt-5">
                         Passionate about creating innovative web solutions with modern technologies. Specializing in full stack development
-                        with a focus on performance and user experience
+                        with a focus on performance and user experience.
                     </p>
                     <motion.div {...scrollLeft} className="flex flex-row mt-10">
                         <motion.button {...buttonHover} className="px-5 md:px-8 md:py-3 rounded-lg bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-[#0f172a] font-semibold text-sm cursor-pointer hover:drop-shadow-[0_0_3px_#2563eb] transition-all duration-200">
