@@ -29,7 +29,7 @@ export const projects = [
         text : 'A personal portfolio websites that describes and explain the job expertise and skill of a website developer',
         skills : ['React', 'TailwindCSS'],
         code_link : 'https://github.com/webfyredev/React_Portfolio_Website',
-        live_link : 'https://react-portfolio-website-onut.vercel.app/',
+        live_link : 'https://react-portfolio-website-chi-nine.vercel.app/',
     },
     {
         id : 4,
