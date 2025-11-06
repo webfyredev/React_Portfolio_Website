@@ -27,7 +27,7 @@ export const projects = [
         image : portfolioImg,
         title: 'PortFolio Websites',
         text : 'A personal portfolio websites that describes and explain the job expertise and skill of a website developer',
-        skills : ['React', 'TailwindCSS'],
+        skills : ['React', 'TailwindCSS', 'Django'],
         code_link : 'https://github.com/webfyredev/React_Portfolio_Website',
         live_link : 'https://react-portfolio-website-chi-nine.vercel.app/',
     },
