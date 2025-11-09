@@ -45,7 +45,7 @@ export const projects = [
         image : hopebloomImg,
         title: 'NGO Project (HopeBloom Africa)',
         text : 'A fully responsive NGO platform focused on community development, featuring programs, impact metrics, stories, and seamless user engagement.',
-        skills : ['React', 'TailwindCSS'],
+        skills : ['React', 'TailwindCSS', 'Django'],
         code_link : 'https://github.com/webfyredev/HopeBloom_Africa',
         live_link : 'https://hopebloomafrica.vercel.app/',
     },

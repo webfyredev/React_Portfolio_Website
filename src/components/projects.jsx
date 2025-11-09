@@ -13,7 +13,7 @@ export default function Project(){
                 </motion.p>
                 <motion.div {...scrollUp} className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full h-auto mt-3 p-5">
                 {projects.slice().reverse().map((project) =>(
-                    <motion.div key={project.id} {...projectEffectsbtn} className="w-[95%] flex flex-col p-5 mb-5 rounded-md bg-[#0f172a]">
+                    <motion.div key={project.id} {...projectEffectsbtn} className="w-full border-1 border-red-500 md:w-[95%] flex flex-col p-5 mb-5 rounded-md bg-[#0f172a]">
                         <img src={project.image} alt={project.title} className="w-[100%] h-full object-cover" />
                         <h2 className="mt-2 font-semibold text-[#38bdf8]">{project.title}</h2>
                         <p className="text-slate-200 text-sm mt-2">
