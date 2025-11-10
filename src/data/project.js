@@ -36,7 +36,7 @@ export const projects = [
         image : logisticsImg,
         title: 'Logistics Project (ShiftEase Logistics)',
         text : 'A modern logistics website built with React, showcasing secure delivery services, real-time tracking, and a clean, responsive user interface.',
-        skills : ['React', 'TailwindCSS'],
+        skills : ['React', 'TailwindCSS', 'Django'],
         code_link : 'https://github.com/webfyredev/SwiftEase',
         live_link : 'https://swift-ease.vercel.app/',
     },
