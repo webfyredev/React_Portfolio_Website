@@ -10,8 +10,8 @@ export const projects = [
         title: 'Cleaning Websites',
         text : 'A cleaning websites that offers all forms of cleaning services to the peak of the views interest.',
         skills : ['React', 'TailwindCSS'],
-        code_link : 'https://github.com/webfyredev/WorkShyn',
-        live_link : 'https://work-shyn.vercel.app/',
+        code_link : 'https://github.com/webfyredev/ShynWorks',
+        live_link : 'https://shyn-works.vercel.app/',
     },
     {
         id : 2,
