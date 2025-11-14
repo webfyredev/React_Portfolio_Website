@@ -6,6 +6,7 @@ import { ReactTyped } from "react-typed";
 import {Link} from 'react-scroll'
 import {buttonHover, scrollLeft, scrollRight} from '../animations/motion.js'
 import { motion } from "framer-motion";
+// import profilePic from '../images/profile_pic.png'
 export default function Hero(){
     return(
         <>

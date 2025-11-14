@@ -13,10 +13,10 @@ export default function Project(){
                 </motion.p>
                 <motion.div {...scrollUp} className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full h-auto mt-3 p-5">
                 {projects.slice().reverse().map((project) =>(
-                    <motion.div key={project.id} {...projectEffectsbtn} className="w-full  md:w-[95%] flex flex-col p-5 mb-5 rounded-md bg-[#0f172a]">
-                        <img src={project.image} alt={project.title} className="w-[100%] h-full object-cover" />
+                    <motion.div key={project.id} {...projectEffectsbtn} className="w-full md:w-[95%] h-auto flex flex-col p-5 mb-5 rounded-md bg-[#0f172a]">
+                        <img src={project.image} alt={project.title} className="w-[100%] h-55 object-cover rounded-md" />
                         <h2 className="mt-2 font-semibold text-[#38bdf8]">{project.title}</h2>
-                        <p className="text-slate-200 text-sm mt-2">
+                        <p className="text-slate-200 text-xs mt-2">
                             {project.text}
                         </p>
                         <ul className="flex">
@@ -24,7 +24,7 @@ export default function Project(){
                                 <motion.li {...buttonHover} className="px-4 py-1.5 mt-4 text-xs font-semibold mr-2 rounded-xl bg-[#02153b] text-[#38bdf8] hover:bg-gradient-to-r from-[#38bdf8] to-[#2563eb] hover:text-white transition-all duration-300 hover:cursor-pointer">{skill}</motion.li>
                             ))}
                         </ul>
-                        <div className="w-full h-20 mt-4 flex items-center justify-between">
+                        <div className="w-full h-11 mt-4 flex items-center justify-between">
                             <motion.button {...buttonHover} className="w-35 h-[85%] bg-gradient-to-r from-[#38bdf8] to-[#2563eb] text-sm font-semibold rounded-md cursor-pointer text-white">
                                 <Link to={project.live_link}>
                                     Live Demo
