@@ -3,6 +3,7 @@ import constructionImg from '../images/projects/project1.png'
 import portfolioImg from '../images/projects/project2.png'
 import logisticsImg from '../images/projects/project4.png'
 import hopebloomImg from '../images/projects/project5.png'
+import lifecareImg from '../images/projects/project6.png'
 export const projects = [
     {
         id : 1,
@@ -48,5 +49,14 @@ export const projects = [
         skills : ['React', 'TailwindCSS', 'Django'],
         code_link : 'https://github.com/webfyredev/HopeBloom_Africa',
         live_link : 'https://hopebloomafrica.vercel.app/',
+    },
+    {
+        id : 6,
+        image : lifecareImg,
+        title: 'Hospital Websites (LifeCare)',
+        text : 'A modern, user-friendly hospital website designed to streamline healthcare access and information.',
+        skills : ['React', 'TailwindCSS'],
+        code_link : 'https://github.com/webfyredev/LifeCare_Websites',
+        live_link : 'https://life-care-websites.vercel.app/',
     },
 ];
