@@ -55,7 +55,7 @@ export const projects = [
         image : lifecareImg,
         title: 'Hospital Websites (LifeCare)',
         text : 'A modern, user-friendly hospital website designed to streamline healthcare access and information.',
-        skills : ['React', 'TailwindCSS'],
+        skills : ['React', 'TailwindCSS', 'Django'],
         code_link : 'https://github.com/webfyredev/LifeCare_Websites',
         live_link : 'https://life-care-websites.vercel.app/',
     },

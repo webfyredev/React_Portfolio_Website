@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { SiX } from "react-icons/si";
 export default function Footer(){
     const dates = new Date().getFullYear();
     return(
@@ -16,7 +17,7 @@ export default function Footer(){
                         <FaLinkedin  className="cursor-pointer hover:text-[#2563eb]"/>
                     </Link>
                     <Link to="https://x.com/WebFyreDev">
-                        <FaTwitter  className="cursor-pointer hover:text-[#2563eb]"/>
+                        <SiX  className="cursor-pointer hover:text-[#2563eb]"/>
                     </Link>
                     </div>
                 </div>

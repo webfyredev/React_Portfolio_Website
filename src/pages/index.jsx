@@ -6,6 +6,7 @@ import Skills from "../components/skills";
 import Project from "../components/projects";
 import Faqs from "../components/faq";
 import Contacts from "../components/contacts";
+import { TechnicalSkills } from "../components/skill";
 
 export default function Home_Page(){
     return(
@@ -13,6 +14,7 @@ export default function Home_Page(){
             <NavBar />
             <Hero />
             <About />
+            <TechnicalSkills />
             <Skills />
             <Project />
             <Faqs />

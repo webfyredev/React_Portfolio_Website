@@ -41,7 +41,7 @@ export default function About(){
     return(
         <>
         <motion.div {...scrollUp} className="w-full lg:h-120 h-auto mt-20 bg-[#0f172a] overflow-hidden" id="about">
-            <motion.h2 {...scrollUp} className="font-bold text-[#38bdf8] text-3xl flex w-[100%] md:h-[12%] h-auto flex items-center justify-center pt-5">
+            <motion.h2 {...scrollUp} className="font-bold text-[#38bdf8] text-3xl flex w-[100%] md:h-[12%] h-auto flex items-center justify-center pt-5 mt-5">
             About Me
             </motion.h2>
             <div className="lg:flex lg:flex-row flex flex-col md:flex-col w-[100%] lg:h-[85%] h-auto px-5 py-3 justify-between mt-5">
@@ -49,7 +49,7 @@ export default function About(){
                 <motion.img {...scrollRight} src={aboutImg} className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-all duration-300" />
                 </div>
                 <motion.div {...scrollLeft} className="lg:w-[50%] lg:h-full w-full h-auto flex flex-col p-5">
-                    <h2 className="font-bold text-white md:text-4xl text-3xl mb-5">
+                    <h2 className="font-bold text-white lg:text-4xl md:text-3xl text-2xl mb-5">
                         Hello I'm <span className="bg-gradient-to-r from-[#38bdf8] to-[#2563eb] bg-clip-text text-transparent">Oyinloye Oyinlade</span>
                     </h2>
                     <p className="text-slate-200 text-justify  text-xs md:text-sm">
