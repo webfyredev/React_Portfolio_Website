@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const faqs = [
     {
         question : 'What technologies do you specialize in',
-        answer : 'I Specialize in React, TailwindCSS, Node.Js, Python, Django, for building modern, scalable web applications',
+        answer : 'I Specialize in React, TailwindCSS, TypeScript, Python, Django, for building modern, scalable web applications',
     },
     {
         question: "Do you handle both frontend and backend development?",
@@ -18,7 +18,7 @@ const faqs = [
     },
     {
         question: "What tools do you use in your workflow?",
-        answer: "I use VS Code, Git/GitHub, Figma, Postman, and various modern web dev tools for productivity and version control.",
+        answer: "I use VS Code, Git/GitHub, Postman, and various modern web dev tools for productivity and version control.",
     },
     {
         question: "How can I contact you?",
@@ -40,8 +40,8 @@ export default function Faqs (){
                 <div className="space-y-4 mb-10">
                     {faqs.map((faq, index) =>(
                         <motion.div {...scrollUpNext} key={index} className="border-0.8 border-[#38bdf8] rounded-lg overflow-hidden">
-                            <button onClick={() => toggleFaqs(index)} className="w-full flex justify-between items-center p-4 text-left bg-[#0f173b] hover:bg-[#02153b] group transition-all duration-300">
-                                <span className="font-semibold text-xs md:text-sm">{faq.question}</span>
+                            <button onClick={() => toggleFaqs(index)} className="w-full flex justify-between items-center p-4 text-left bg-[#0f173b] hover:bg-[#02153b] group transition-all duration-300 cursor-pointer">
+                                <span className="font-semibold text-xs md:text-sm group-hover:text-[#38bdf8]">{faq.question}</span>
                                 <FaChevronDown  className={`transform transition-transform group-hover:text-[#38bdf8] duration-300 ${activeIndex === index ? "rotate-180" : ""}`}/>
                             </button>
                             {activeIndex === index && (

@@ -8,13 +8,13 @@ export default function Project(){
         <>
         <div className="w-full h-auto flex flex-col items-center overflow-hidden" id="project">
                 <motion.h2 {...scrollUp} className="mt-5 font-bold text-[#38bdf8] text-3xl">My Projects</motion.h2>
-                <motion.p {...scrollUpNext} className="md:w-[50%] text-center my-3 text-slate-200 text-xs lg:text-sm">
+                <motion.p {...scrollUpNext} className="w-[80%] md:w-[50%] text-center my-3 text-slate-200 text-[10px] md:text-xs lg:text-sm">
                     Here are some of my recent prrojects that showcase my skills in web development and backend engineering. Each project represents a unique challenge and solution
                 </motion.p>
                 <motion.div {...scrollUp} className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full h-auto mt-3 p-5">
                 {projects.slice().reverse().map((project) =>(
                     <motion.div key={project.id} {...projectEffectsbtn} className="w-full md:w-[95%] h-auto flex flex-col p-5 mb-5 rounded-md bg-[#0f172a]">
-                        <img src={project.image} alt={project.title} className="w-[100%] h-55 object-cover rounded-md" />
+                        <img src={project.image} alt={project.title} className="w-[100%] h-50 lg:h-55 object-cover rounded-md" />
                         <h2 className="mt-2 font-semibold text-[#38bdf8]">{project.title}</h2>
                         <p className="text-slate-200 text-xs mt-2">
                             {project.text}

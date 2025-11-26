@@ -9,7 +9,7 @@ import { useState } from "react";
 
 export default function Contacts(){
     const [formData, setFormData] = useState({full_name: "", email:"", message : ""})
-    const [status, setStatus] = useState("");
+    const [status, setStatus] = useState({message : "", type : ""});
     const handleChange = (e) => {
         setFormData({...formData, [e.target.name]: e.target.value});
     };
@@ -17,32 +17,32 @@ export default function Contacts(){
         e.preventDefault();
         try{
             await axios.post("https://portfolio-backend-1-2dt3.onrender.com/contact/", formData);
-            setStatus("Messages sent successfully");
+            setStatus({message : `Thanks for contacting us ${formData.email}`, type : "success"});
             setFormData ({full_name:"", email:"", message:""})
             setTimeout(() => setStatus(""), 4000)
         } catch (error){
-                setStatus("Failed to send Message. Try again")
-                setTimeout(() => setStatus(""), 4000)
+            setStatus({message : "Failed to send Message. Try again", type : "error"})
+            setTimeout(() => setStatus(""), 4000)
         };
 
     };
     return(
         <>
-            {status && (
-                <motion.div initial ={{opacity:0, y:-50}}
-                animate = {{opacity: 1, y:0}}
-                exit={{opacity : 0, y:-50}}
-                transition={{duration:0.4}}
-                className={`fixed top-5 left-1/2 transform -translate-x-1/2 z-50 px-5 py-3 rounded-lg shadow-lg text-white font-semibold ${status.includes("success") ? 'bg-green-500' : 'bg-red-500'}`}
-                >
-                    {status}
+            {status.message && (
+                <motion.div 
+                initial = {{opacity : 0, y : -40}}
+                animate = {{opacity : 1, y : 0}}
+                transition={{duration:1}}
+                exit={{opacity : 0, y : -40}}
+                className={`fixed top-5 transform -translate-x-1/2 left-1/2 z-50 px-3 py-4 md:py-3.5 rounded-md shadow-sm text-white text-xs md:text-sm text-center w-[95%] h-12 font-semibold ${status.type === "success" ? 'bg-green-500' : 'bg-red-500'}`}>
+                    {status.message}
                 </motion.div>
             )}
             <div className="w-full h-auto px-3 md:px-0 py-10 items-center flex flex-col mt-10 overflow-hidden" id="contact">
                 <motion.h2 {...scrollUp} className="text-3xl font-bold text-center my-3 text-[#38bdf8]">
                     Get In Touch
                 </motion.h2>
-                <motion.p {...scrollUpNext} className="text-center lg:w-[40%] w-[80%] text-slate-300 text-xs  md:text-sm">
+                <motion.p {...scrollUpNext} className="text-center lg:w-[40%] w-full md:w-[80%] text-slate-300 text-xs  md:text-sm">
                     I'm always open to discussing new opportunities, interesting projects, or just haiving a chat about technology. Feel free to reach out.
                 </motion.p>
                 <form onSubmit={handleSubmit} className="md:w-[90%] w-full h-auto mt-5 flex flex-col md:p-5">
@@ -52,7 +52,7 @@ export default function Contacts(){
                     <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Enter your email address" className="w-full h-12 outline-none p-5 hover:drop-shadow-[0_0_1px_#2563eb] rounded-lg bg-[#0f172a] text-[#38bdf8] transition-all duration-200 mb-5 text-xs md:text-sm"/>
                     <label htmlFor="" className="mb-2 font-semibold text-xs md:text-sm text-[#38bdf8] ml-1">Message</label>
                     <textarea  name="message" value={formData.message} onChange={handleChange} required placeholder="Tell me about your project or just say hello!" className="w-full h-30 outline-none p-5 hover:drop-shadow-[0_0_1px_#2563eb] rounded-lg bg-[#0f172a] text-[#38bdf8] transition-all duration-200 text-xs md:text-sm"></textarea>
-                    <motion.button type="submit" {...buttonHover} className="mt-5 w-full h-13 rounded-lg cursor-pointer font-bold bg-[#38bdf8] text-xs md:text-sm">Send Message</motion.button>
+                    <motion.button type="submit" {...buttonHover} className="mt-5 w-full h-13 rounded-lg cursor-pointer font-bold bg-[#38bdf8] text-xs md:text-sm outline-none">Send Message</motion.button>
                 </form>
                 <motion.div {...scrollLeft} className="md:w-[90%] mt-20 w-full h-auto p-5 bg-[#0f172a] rounded-md ">
                     <h3 className="text-[#38bdf8] font-semibold text-lg md:text-2xl ml-5">
@@ -61,7 +61,7 @@ export default function Contacts(){
                     <div className="flex w-auto h-auto p-3 items-center mt-3 hover:bg-[#0f173b] transition-all rounded-lg">
                         <FaMapMarkerAlt  className="mr-2 w-8 h-8 md:w-10 md:h-10 bg-gradient-to-r from-[#38bdf8] to-[#2563eb] text-[#0f172a] p-2.5 rounded-full mt-1"/>
                         <div className="flex flex-col w-40">
-                            <h3 className="font-semibold text-slate-200 text-sm md:text-auto">
+                            <h3 className="font-semibold text-slate-200 text-sm md:text-base">
                                 Location
                             </h3>
                             <p className="text-xs md:text-sm text-white">
@@ -72,23 +72,23 @@ export default function Contacts(){
                     <div className="flex w-auto h-auto p-3 items-center mt-3 hover:bg-[#0f173b] transition-all rounded-lg">
                         <MdEmail  className="mr-2 w-8 h-8 md:w-10 md:h-10 bg-gradient-to-r from-[#38bdf8] to-[#2563eb] text-[#0f172a] p-2.5 rounded-full mt-1"/>
                         <div className="flex flex-col w-40">
-                            <h3 className="font-semibold text-slate-200 text-sm">
+                            <h3 className="font-semibold text-slate-200 text-sm md:text-base">
                                 Email
                             </h3>
-                            <Link to="mailto:webfyre@gmail.com" className="text-xs md:text-sm text-white hover:text-[#38bdf8]">
+                            <a href="mailto:webfyre@gmail.com" className="text-xs md:text-sm text-white hover:text-[#38bdf8]">
                             webfyre@gmail.com
-                            </Link>
+                            </a>
                         </div>
                     </div>
                     <div className="flex w-auto h-auto p-3 items-center my-3 hover:bg-[#0f173b] transition-all rounded-lg">
                         <FaPhoneAlt  className="mr-2 w-8 h-8 md:w-10 md:h-10 bg-gradient-to-r from-[#38bdf8] to-[#2563eb] text-[#0f172a] p-2.5 rounded-full mt-1"/>
                         <div className="flex flex-col w-40">
-                            <h3 className="font-semibold text-slate-200 text-sm">
+                            <h3 className="font-semibold text-slate-200 text-sm md:text-base">
                                 Phone
                             </h3>
-                            <Link to="phoneto:+2349131580378" className="text-xs md:text-sm text-white hover:text-[#38bdf8]">
+                            <a href="tel://+2349131580378" className="text-xs md:text-sm text-white hover:text-[#38bdf8]">
                             +2349131580378
-                            </Link>
+                            </a>
                         </div>
                     </div>
                     <h3 className="text-[#38bdf8] font-semibold text-lg md:text-2xl ml-5 mt-10">
