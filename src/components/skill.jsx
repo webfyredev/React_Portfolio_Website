@@ -102,9 +102,9 @@ export function TechnicalSkills(){
                 <h2 className="mt-5 font-bold text-[#38bdf8] text-3xl">Technical Skills</h2>
                 <div className="px-5 lg:px-10 py-10 w-full lg:w-[85%] mt-5 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
                 {skills.map((skill) => (
-                    <motion.div {...projectEffectsbtn} className='cursor-pointer w-[90%] flex flex-col py-5 bg-[#02153b] hover:bg-[#0f172a] items-center rounded-lg space-y-2.5 hover:border-1 hover:border-[#0f173b]'>
+                    <motion.div {...projectEffectsbtn} className='cursor-pointer w-[90%] flex flex-col py-5 bg-[#02153b] hover:bg-[#0f172a] items-center rounded-lg space-y-2.5 hover:border-1 hover:border-[#0f173b] group'>
                         <img src={skill.icon} className='w-6 h-6 md:h-9 md:w-9 object-cover'/>
-                        <h2 className='font-semibold text-white text-sm mt-1.5'>
+                        <h2 className='font-semibold text-white text-sm mt-1.5 group-hover:text-[#38bdf8]'>
                             {skill.text}
                         </h2>
                     </motion.div>
