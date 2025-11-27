@@ -117,7 +117,7 @@ const skills = [
 export function TechnicalSkills(){
     return(
         <>
-            <div className="flex p-5 flex-col items-center">
+            <div className="flex p-5 flex-col items-center" id="skill">
                 <h2 className="mt-5 font-bold text-[#38bdf8] text-3xl">Technical Skills</h2>
                 <div className="px-5 lg:px-10 py-10 w-full lg:w-[85%] mt-5 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
                 {skills.map((skill) => (
