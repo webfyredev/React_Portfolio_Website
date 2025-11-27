@@ -24,10 +24,6 @@ export default function Skills(){
     ]
     const backEnd_Skills = [
         {
-            name : 'Node.js',
-            level : 85
-        },
-        {
             name : 'Django',
             level : 90
         },
@@ -49,10 +45,6 @@ export default function Skills(){
             name : 'Supabase',
             level : 60
         },
-        {
-            name : 'MongoDB',
-            level : 75
-        }
     ]
     const tool_skills = [
         {
@@ -69,7 +61,7 @@ export default function Skills(){
             level : 85,
         },
         {
-            name : 'Docker',
+            name : 'Postman',
             level : 80
         },
     ]

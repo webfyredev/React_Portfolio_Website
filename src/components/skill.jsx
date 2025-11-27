@@ -2,16 +2,13 @@ import react from '../images/skills/react.png'
 import javascript from '../images/skills/javascript.png'
 import typescript from '../images/skills/typescript.png'
 import tailwindcss from '../images/skills/tailwindcss.png'
-import framer from '../images/skills/framer.png'
 import nextjs from '../images/skills/nextjs.png'
-import node from '../images/skills/nodejs.png'
 import supabase from '../images/skills/superbase.png'
 import bootstrap from '../images/skills/bootstrap.png'
 import django from '../images/skills/django.png'
 import postman from '../images/skills/postman.png'
 import git from '../images/skills/git.png'
 import github from '../images/skills/github.png'
-import docker from '../images/skills/docker.png'
 import rest_framework from '../images/skills/rest_framework.png'
 import render from '../images/skills/render.png'
 import vercel from '../images/skills/vercel.png'
@@ -42,11 +39,6 @@ const skills = [
         text : 'TailwindCSS'
     },
     {
-        id : 5,
-        icon : framer,
-        text : 'Framer'
-    },
-    {
         id : 6,
         icon : bootstrap,
         text : 'Bootstrap'
@@ -56,12 +48,6 @@ const skills = [
         icon : nextjs,
         text : 'Next Js'
     },
-    {
-        id : 8,
-        icon : node,
-        text : 'Node Js'
-    },
-    
     {
         id : 9,
         icon : supabase,
@@ -91,11 +77,6 @@ const skills = [
         id : 14,
         icon : github,
         text : 'Github'
-    },
-    {
-        id : 15,
-        icon : docker,
-        text : 'Docker'
     },
     {
         id : 16,
