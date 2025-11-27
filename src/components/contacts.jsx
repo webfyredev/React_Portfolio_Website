@@ -75,8 +75,8 @@ export default function Contacts(){
                             <h3 className="font-semibold text-slate-200 text-sm md:text-base">
                                 Email
                             </h3>
-                            <a href="mailto:webfyre@gmail.com" className="text-xs md:text-sm text-white hover:text-[#38bdf8]">
-                            webfyre@gmail.com
+                            <a href="mailto:oyinwebworks@gmail.com" className="text-xs md:text-sm text-white hover:text-[#38bdf8]">
+                            oyinwebworks@gmail.com
                             </a>
                         </div>
                     </div>
@@ -104,7 +104,7 @@ export default function Contacts(){
                         <Link to="https://x.com/WebFyreDev">
                             <SiX  className="w-9 h-9 cursor-pointer bg-[#0f173b] text-[#38bdf8] p-2.5 md:p-2 rounded-full hover:bg-gradient-to-r from-[#38bdf8] to-[#2563eb] hover:text-[#0f172a] transtion-all duration-500"/>
                         </Link>
-                        <Link to="mailto:webfyre@gmail.com">
+                        <Link to="mailto:oyinwebworks@gmail.com">
                             <MdEmail  className="w-9 h-9 cursor-pointer bg-[#0f173b] text-[#38bdf8] p-2.5 md:p-2 rounded-full hover:bg-gradient-to-r from-[#38bdf8] to-[#2563eb] hover:text-[#0f172a] transtion-all duration-500"/>
                         </Link>
                     </div>
