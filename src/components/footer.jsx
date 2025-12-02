@@ -16,7 +16,7 @@ export default function Footer(){
                     <Link to="https://www.linkedin.com/in/oyinlade-oyinloye-3159ba292/">
                         <FaLinkedin  className="cursor-pointer hover:text-[#2563eb]"/>
                     </Link>
-                    <Link to="https://x.com/WebFyreDev">
+                    <Link to="https://x.com/OyinWebX">
                         <SiX  className="cursor-pointer hover:text-[#2563eb]"/>
                     </Link>
                     </div>

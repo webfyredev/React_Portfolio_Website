@@ -101,7 +101,7 @@ export default function Contacts(){
                         <Link to="https://www.linkedin.com/in/oyinlade-oyinloye-3159ba292/">
                             <FaLinkedin  className="w-9 h-9 cursor-pointer bg-[#0f173b] text-[#38bdf8] p-2.5 md:p-2 rounded-full hover:bg-gradient-to-r from-[#38bdf8] to-[#2563eb] hover:text-[#0f172a] transtion-all duration-500"/>
                         </Link>
-                        <Link to="https://x.com/WebFyreDev">
+                        <Link to="https://x.com/OyinWebX">
                             <SiX  className="w-9 h-9 cursor-pointer bg-[#0f173b] text-[#38bdf8] p-2.5 md:p-2 rounded-full hover:bg-gradient-to-r from-[#38bdf8] to-[#2563eb] hover:text-[#0f172a] transtion-all duration-500"/>
                         </Link>
                         <Link to="mailto:oyinwebworks@gmail.com">
