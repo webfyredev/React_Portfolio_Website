@@ -33,7 +33,7 @@ export default function Faqs (){
     }
     return(
         <>
-            <section className="w-full bg-[#0f172a] text-white px-8 py-5 overflow-hidden">
+            <section className="w-full bg-[#0f172a] text-white px-5 lg:px-8 py-5 overflow-hidden">
                 <motion.h2 {...scrollUp} className="text-2xl md:text-3xl font-bold text-center mb-10 mt-3 text-[#38bdf8]">
                     Frequently Asked Questions
                 </motion.h2>

@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Route, Link as RouteLink } from "react-router-dom";
 import logo from '../images/log.png'
 // import { BsSun, BsMoon } from "react-icons/bs";
-import { FaMoon, FaSun, FaTimes, FaBars} from "react-icons/fa"
+import { FaMoon, FaSun, FaTimes, FaBars, FaGithub, FaLinkedin} from "react-icons/fa"
+import { SiX } from "react-icons/si";
 import { Link as ScrollLink } from "react-scroll"
 import { scrollUp } from "../animations/motion";
 import { motion } from "framer-motion";
@@ -20,7 +21,7 @@ export default function NavBar(){
                 <RouteLink to ="/" className="font-bold text-[#38bdf8] text-2xl flex">
                     <img src={logo} className="w-9 h-8.5" />WebFyre
                 </RouteLink>
-                <div className="hidden lg:flex items-center justify-evenly ml-10">
+                <div className="hidden lg:flex items-center justify-evenly ml-50">
                     <ul className="flex">
                         <li className="px-7 py-2 rounded-md font-semibold text-[#64748b] text-sm hover:cursor-pointer hover:text-[#2563eb] hover:bg-[#02153b] transition-all duration-300 mr-1">
                             <ScrollLink to="home"
@@ -75,7 +76,19 @@ export default function NavBar(){
                                 Contacts
                             </ScrollLink>
                         </li>
+                        
                     </ul>
+                </div>
+                <div className="hidden lg:flex items-center justify-evenly text-[#38bdf8] w-40 h-full">
+                    <a href="https://github.com/webfyredev/">
+                        <FaGithub  className="cursor-pointer hover:text-[#2563eb] "/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/oyinlade-oyinloye-3159ba292/">
+                        <FaLinkedin  className="cursor-pointer hover:text-[#2563eb]"/>
+                    </a>
+                    <a href="https://x.com/OyinWebX">
+                        <SiX  className="cursor-pointer hover:text-[#2563eb]"/>
+                    </a>
                 </div>
                 <div>
                     {/* <ThemeToggle /> */}

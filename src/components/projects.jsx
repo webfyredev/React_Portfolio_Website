@@ -7,7 +7,7 @@ export default function Project(){
     return(
         <>
         <div className="w-full h-auto flex flex-col items-center overflow-hidden" id="project">
-                <motion.h2 {...scrollUp} className="mt-5 font-bold text-[#38bdf8] text-3xl">My Projects</motion.h2>
+                <motion.h2 {...scrollUp} className="mt-10 font-bold text-[#38bdf8] text-3xl">My Projects</motion.h2>
                 <motion.p {...scrollUpNext} className="w-[80%] md:w-[50%] text-center my-3 text-slate-200 text-[10px] md:text-xs lg:text-sm">
                     Here are some of my recent prrojects that showcase my skills in web development and backend engineering. Each project represents a unique challenge and solution
                 </motion.p>
@@ -15,7 +15,7 @@ export default function Project(){
                 {projects.slice().reverse().map((project) =>(
                     <motion.div key={project.id} {...projectEffectsbtn} className="w-full md:w-[95%] h-auto flex flex-col p-5 mb-5 rounded-md bg-[#0f172a]">
                         <img src={project.image} alt={project.title} className="w-[100%] h-50 lg:h-55 object-cover rounded-md" />
-                        <h2 className="mt-2 font-semibold text-[#38bdf8]">{project.title}</h2>
+                        <a href={project.live_link} className="mt-2 font-semibold text-[#38bdf8]">{project.title}</a>
                         <p className="text-slate-200 text-xs mt-2">
                             {project.text}
                         </p>

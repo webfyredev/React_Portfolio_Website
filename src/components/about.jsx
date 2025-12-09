@@ -44,15 +44,15 @@ export default function About(){
             <motion.h2 {...scrollUp} className="font-bold text-[#38bdf8] text-3xl flex w-[100%] md:h-[12%] h-auto flex items-center justify-center pt-5 mt-5">
             About Me
             </motion.h2>
-            <div className="lg:flex lg:flex-row flex flex-col md:flex-col w-[100%] lg:h-[85%] h-auto px-5 py-3 justify-between mt-5">
+            <div className="lg:flex lg:flex-row flex flex-col md:flex-col w-[100%] lg:h-[85%] h-auto px-3 md:px-5 py-3 justify-between mt-5">
                 <div className="lg:w-[45%] w-full h-auto lg:h-full">
                 <motion.img {...scrollRight} src={aboutImg} className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-all duration-300" />
                 </div>
-                <motion.div {...scrollLeft} className="lg:w-[50%] lg:h-full w-full h-auto flex flex-col p-5">
+                <motion.div {...scrollLeft} className="lg:w-[50%] lg:h-full w-full h-auto flex flex-col p-3 md:p-5">
                     <h2 className="font-bold text-white lg:text-4xl md:text-3xl text-2xl mb-5">
                         Hello I'm <span className="bg-gradient-to-r from-[#38bdf8] to-[#2563eb] bg-clip-text text-transparent">Oyinloye Oyinlade</span>
                     </h2>
-                    <p className="text-slate-200 text-justify  text-xs md:text-sm">
+                    <p className="text-slate-200 text-justify text-[13px] md:text-sm">
                         I'm a passionate Web Developer and  Backend Engineer with expeertise in building scalable web applications and robust backend systems. I love turning
                         complex problems into simple, beautiful, and intuitive solutions.
                         With a Strong foundation in both frontend and backend technologies, I create end-to-end solutions that deliver exceptional
