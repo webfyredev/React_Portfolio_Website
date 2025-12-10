@@ -62,7 +62,7 @@ export default function About(){
                     </p>
                     <motion.div {...scrollLeft} className="flex flex-row mt-10">
                             <motion.button {...buttonHover} className="md:px-8 md:py-3 px-5 py-2.5 rounded-lg bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-[#0f172a] font-semibold text-xs md:text-sm cursor-pointer mr-3 hover:drop-shadow-[0_0_3px_#2563eb] transition-all duration-200 hover:text-white">
-                                <a href='#' className="flex">
+                                <a href='/resume_cv.pdf' download="Oyinloye_Oyinlade_CV.pdf" className="flex">
                                 Download CV <FaDownload  className="md:w-3 w-2.5 h-2.5 md:h-3 mt-1 md:mt-1 ml-1"/>
                                 </a>
                             </motion.button>
