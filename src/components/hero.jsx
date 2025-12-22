@@ -11,7 +11,7 @@ export default function Hero(){
     return(
         <>
 
-            <div className="w-full lg:h-130 h-auto relative top-0 bg-[#0f173b] flex flex-col lg:flex lg:flex-row items-center justify-between px-5 py-10 absolute top-16 overflow-hidden" id="home">
+            <div className="w-full lg:h-130 h-auto relative top-0 bg-[#0f173b] flex flex-col lg:flex lg:flex-row items-center justify-between px-5 py-10 absolute top-16 overflow-hidden dots-overlay" id="home">
                 <div className="flex flex-col items-left lg:w-[45%] w-full h-auto lg:h-full px-3 py-10">
                     <motion.button {...scrollLeft} className="w-35 h-9  bg-[#0f172a] rounded-xl text-xs font-semibold text-slate-300 cursor-pointer drop-shadow-[0_0_5px_#2563eb]">
                     Ready to Build

@@ -79,7 +79,7 @@ export default function NavBar(){
                         
                     </ul>
                 </div>
-                <div className="hidden lg:flex items-center justify-evenly text-[#38bdf8] w-40 h-full">
+                <div className="hidden md:flex items-center justify-evenly text-[#38bdf8] w-40 h-full">
                     <a href="https://github.com/webfyredev/">
                         <FaGithub  className="cursor-pointer hover:text-[#2563eb] "/>
                     </a>
