@@ -14,13 +14,18 @@ import { motion } from "framer-motion";
 
 
 export default function NavBar(){
-    const [openIcon, setOpenIcon] = useState(false)
+    const [openIcon, setOpenIcon] = useState(false);
+    const name = '<OO />';
     return(
         <>
             <nav className="w-full h-15 z-50 top-0 bg-blue-500 dark:text-red-500  dark:bg-[#0f172a]/90 backdrop-blur-md z-50 flex flex-row items-center justify-between px-8 fixed">
-                <RouteLink to ="/" className="font-bold text-[#38bdf8] text-2xl flex">
-                    <img src={logo} className="w-9 h-8.5" />WebFyre
-                </RouteLink>
+                <ScrollLink to ="home" 
+                    smooth = {true}
+                    duration = {600}
+                    offset={-50}
+                    className="font-bold text-[#38bdf8] text-2xl flex cursor-pointer">
+                    {name}
+                </ScrollLink>
                 <div className="hidden lg:flex items-center justify-evenly ml-50">
                     <ul className="flex">
                         <li className="px-7 py-2 rounded-md font-semibold text-[#64748b] text-sm hover:cursor-pointer hover:text-[#2563eb] hover:bg-[#02153b] transition-all duration-300 mr-1">
