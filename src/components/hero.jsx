@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaArrowDown, FaGithub, FaLinkedin, FaEnvelope, FaChevronRight,} from "react-icons/fa";
+import { FaArrowDown, FaGithub, FaLinkedin, FaEnvelope, FaChevronRight, FaFolderOpen,} from "react-icons/fa";
 import borders from '../images/batthern.png'
 import logoBg from '../images/fyre.png'
 import { ReactTyped } from "react-typed";
@@ -44,7 +44,7 @@ export default function Hero(){
                                 duration = {600}
                                 offset={-50}
                             className="flex">
-                            View Projects <FaChevronRight  className="hidden md:flex md:w-3 md:h-3 w-3 h-3 md:mt-1.5 mt-1.5 ml-0.5"/>
+                            View Projects <FaFolderOpen  className="hidden md:flex md:w-3 md:h-3 w-3 h-3 md:mt-1.5 mt-1.5 ml-1.5"/>
                             </Link>
                         </motion.button>
                         <motion.button {...buttonHover} className="px-8 py-3 ml-2 rounded-lg bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-[#0f172a] font-semibold text-sm cursor-pointer hover:drop-shadow-[0_0_3px_#2563eb] transition-all duration-200">
@@ -53,7 +53,7 @@ export default function Hero(){
                             duration = {600}
                             offset = {-50}
                             className="flex">
-                            Contact Me<FaEnvelope  className="hidden md:flex md:w-3.5 md:h-3.5 w-3 h-3 md:mt-1 mt-1.5 ml-1"/>
+                            Contact Me<FaEnvelope  className="hidden md:flex md:w-3.5 md:h-3.5 w-3 h-3 md:mt-1 mt-1.5 ml-1.5"/>
                             </Link>
                         </motion.button>
                     </motion.div> 
